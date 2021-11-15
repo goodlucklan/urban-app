@@ -1,21 +1,13 @@
 import React, { useContext } from "react";
-import { View, Text } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
-
 import { SeleccionContext } from "../providers/SeleccionFreeStyler";
 import { Start } from "./Start.screen";
-const Texting = () => {
-  return (
-    <View>
-      <Text>Funciona</Text>
-    </View>
-  );
-};
+import { Formato } from "./Formato.screen";
 export const Principal = () => {
-  const { correcto } = useContext(SeleccionContext);
+  const { adquirido } = useContext(SeleccionContext);
   return (
     <NavigationContainer>
-      {correcto ? <Texting /> : <Start />}
+      {adquirido ? <Formato /> : <Start />}
     </NavigationContainer>
   );
 };

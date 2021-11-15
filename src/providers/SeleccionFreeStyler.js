@@ -8,7 +8,7 @@ export const SeleccionFreeStylerProvider = ({ children }) => {
   return (
     <SeleccionContext.Provider
       value={{
-        correcto,
+        adquirido: !!correcto,
         setcorrecto,
       }}
     >
